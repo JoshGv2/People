@@ -10,11 +10,10 @@ public class Manager extends Person{
     public Manager(int managerId, String company) {
         if(company==null) throw new IllegalArgumentException("Please provide the company.");
         ManagerId = managerId;
-
-
     }
 
-    public Manager(String FirstName, String LastName, Date BirthDate, String Nationality, int managerId, Department department, String company, String gender) {
+    public Manager(String FirstName, String LastName, Date BirthDate, String Nationality, int managerId, Department department,
+                   String company, String gender) {
         super(FirstName, LastName, BirthDate, Nationality, true, gender);
         if(company==null) throw new IllegalArgumentException("Please provide the company.");
         this.department= department;
@@ -32,7 +31,7 @@ public class Manager extends Person{
 
     @Override
     public String toString() {
-        return super.getFirstName() +" " + super.getLastName()+ ", who was born on "+ super.getBirthDate()+ " is currently a manager."+
+        return super.getFirstName() +" " + super.getLastName()+ ", who was born on "+ super.getBirthDate()+ " is currently a manager. "+
                 (super.getGender().toLowerCase()=="male"?"He":"She")+ " is from " + super.getNationality()+"."
                 ;
     }
