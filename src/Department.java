@@ -1,5 +1,3 @@
 public enum Department {
     BUSINESS, TECHNOLOGY, SUPPORT, OPERATIONS, RESOURCES, SALES
-
-
 }
