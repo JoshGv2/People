@@ -30,8 +30,8 @@ public class Person {
     public String toString(){
         return "The persons name is " + this.FirstName +" "+this.LastName +
                 ". They were born on " + this.BirthDate + " and they are from "+this.Nationality +
-                "This person is " + this.Gender +
-                (isEmployed ? " This person is employed": "This person is not employed");
+                ". This person is " + this.Gender +
+                (isEmployed ? ". This person is employed": "This person is not employed") +".";
     }
     public Person(){
 

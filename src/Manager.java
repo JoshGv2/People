@@ -8,6 +8,7 @@ public class Manager extends Person{
 
 
     public Manager(int managerId, String company) {
+        super();
         if(company==null) throw new IllegalArgumentException("Please provide the company.");
         ManagerId = managerId;
         this.company=company;
@@ -17,6 +18,8 @@ public class Manager extends Person{
                    String company, String gender) {
         super(FirstName, LastName, BirthDate, Nationality, true, gender);
         if(company==null) throw new IllegalArgumentException("Please provide the company.");
+
+        this.company=company;
         this.department= department;
 
         setManagerId(managerId);

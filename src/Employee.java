@@ -18,6 +18,7 @@ public class Employee extends Person{
         if(company==null) throw new IllegalArgumentException("Please provide the company.");
         this.department= department;
         setEmployeeId(employeeId);
+        setCompany(company);
     }
 
     public int getEmployeeId() {
