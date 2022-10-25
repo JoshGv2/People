@@ -6,6 +6,16 @@ public class Person {
     private Date BirthDate;
     private String Nationality;
 
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String gender) {
+        Gender = gender;
+    }
+
+    private String Gender;
+
     public boolean isEmployed() {
         return isEmployed;
     }
@@ -20,12 +30,14 @@ public class Person {
     public String toString(){
         return "The persons name is " + this.FirstName +" "+this.LastName +
                 ". They were born on " + this.BirthDate + " and they are from "+this.Nationality +
+                "This person is " + this.Gender +
                 (isEmployed ? " This person is employed": "This person is not employed");
     }
     public Person(){
 
     };
-    public Person (String FirstName, String LastName, Date BirthDate, String Nationality, boolean employed){
+    public Person (String FirstName, String LastName, Date BirthDate, String Nationality, boolean employed,
+    String Gender){
         if(FirstName.length()<2) throw new IllegalArgumentException("The first name is invalid");
         else{
             setFirstName(FirstName);
@@ -40,6 +52,11 @@ public class Person {
             setNationality(Nationality);
         }
         setEmployed(employed);
+        if(!(Gender.equals("Male") || Gender.equals("Female")))
+            throw new IllegalArgumentException("Please insert a valid gender");
+        else{
+            setGender(Gender);
+        }
     }
 
     public String getFirstName() {
