@@ -6,8 +6,8 @@ public class Employee extends Person{
     private Department department;
     private String company;
 
-
     public Employee(int employeeId, String company) {
+        super();
         if(company==null) throw new IllegalArgumentException("Please provide the company.");
         employeeId = employeeId;
     }
@@ -51,6 +51,5 @@ public class Employee extends Person{
                 (super.getGender().toLowerCase()=="male"?"He":"She")+ " is from " + super.getNationality()+"."
                 ;
     }
-
 
 }

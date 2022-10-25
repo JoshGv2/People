@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Person {
+public abstract class Person {
     private String FirstName;
     private String LastName;
     private Date BirthDate;
@@ -26,17 +26,17 @@ public class Person {
 
     private boolean isEmployed;
 
-
     public String toString(){
         return "The persons name is " + this.FirstName +" "+this.LastName +
                 ". They were born on " + this.BirthDate + " and they are from "+this.Nationality +
                 ". This person is " + this.Gender +
                 (isEmployed ? ". This person is employed": "This person is not employed") +".";
     }
-    public Person(){
+    Person(){
 
-    };
-    public Person (String FirstName, String LastName, Date BirthDate, String Nationality, boolean employed,
+    }
+
+     Person (String FirstName, String LastName, Date BirthDate, String Nationality, boolean employed,
     String Gender){
         if(FirstName.length()<2) throw new IllegalArgumentException("The first name is invalid");
         else{
